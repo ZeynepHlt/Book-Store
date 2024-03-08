@@ -1,0 +1,23 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@layer base {
+  .link {
+    @apply px-5 mt-1 hover:text-lila duration-300 cursor-pointer;
+  }
+  .active {
+    @apply text-lg font-bold font-Mont text-lila before:content-['.']  before:text-4xl before:absolute before:right-44 before:bottom-4;
+  }
+  .buttons {
+    @apply border-2 px-12 py-1 border-lila text-lila font-bold uppercase font-Mont text-sm -tracking-wider hover:bg-lila hover:text-white  duration-500;
+  }
+  .nonActiveModal {
+    @apply opacity-0 -z-50 transition-all ease-in-out duration-500;
+  }
+  .activeModal {
+    @apply opacity-100 z-50 transition-all ease-in-out duration-500;
+  }
+}
